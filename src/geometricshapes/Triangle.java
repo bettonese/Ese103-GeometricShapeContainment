@@ -1,6 +1,6 @@
 package geometricshapes;
 
-public class Triangle {
+public class Triangle extends GeometricShape{
 	
 	private double xV;
 	private double yV;
@@ -68,6 +68,7 @@ public class Triangle {
 	 * 
 	 * @return ascissa minore della bounding box del triangolo
 	 */
+	@Override
 	public double getXMin(){
 		return this.xV;
 	}
@@ -75,6 +76,7 @@ public class Triangle {
 	 * 
 	 * @return ordinata minore della bounding box del triangolo
 	 */
+	@Override
 	public double getYMin(){
 		return this.yV;
 	}
@@ -82,6 +84,7 @@ public class Triangle {
 	 * 
 	 * @return ascissa maggiore della bounding box del triangolo
 	 */
+	@Override
 	public double getXMax(){
 		return this.xV + this.l;
 	}
@@ -89,6 +92,7 @@ public class Triangle {
 	 * 
 	 * @return ordinata maggiore della bounding box del triangolo
 	 */
+	@Override
 	public double getYMax(){
 		return this.yV + this.l * Math.sqrt(3)/2;
 	}

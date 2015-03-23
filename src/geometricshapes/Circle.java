@@ -1,6 +1,6 @@
 package geometricshapes;
 
-public class Circle {
+public class Circle extends GeometricShape{
 	
 	private double xC;
 	private double yC;
@@ -67,6 +67,7 @@ public class Circle {
 	 * 
 	 * @return ascissa minore della bounding box del cerchio
 	 */
+	@Override
 	public double getXMin(){
 		return this.xC - this.r;
 	}
@@ -74,6 +75,7 @@ public class Circle {
 	 * 
 	 * @return ordinata minore della bounding box del cerchio
 	 */
+	@Override
 	public double getYMin(){
 		return this.yC - this.r;
 	}
@@ -81,6 +83,7 @@ public class Circle {
 	 * 
 	 * @return ascissa maggiore della bounding box del cerchio
 	 */
+	@Override
 	public double getXMax(){
 		return this.xC + this.r;
 	}
@@ -88,6 +91,7 @@ public class Circle {
 	 * 
 	 * @return ordinata maggiore della bounding box del cerchio
 	 */
+	@Override
 	public double getYMax(){
 		return this.yC + this.r;
 	}

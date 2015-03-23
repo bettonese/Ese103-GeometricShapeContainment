@@ -8,30 +8,28 @@ import geometricshapes.*;
 public class Ese103 {
 
 	public static void main(String[] args) {
-		Circle c1 = new Circle(2,4,6);
-		Circle c2 = new Circle(2,4,6);
-		Circle c3 = new Circle(2,5,6);
-		Circle c4 = new Circle(2,4,8);
-		Triangle t1 = new Triangle(2,4,6);
-		Triangle t2 = new Triangle(2,4,6);
-		Triangle t3 = new Triangle(2,5,7); 
-		Triangle t4 = new Triangle(2,4,6);
+		GeometricShape shapeArray[] = new GeometricShape[5];
 		
-		System.out.println("C1 contiene C2? " +c1.contains(c2));
-		System.out.println("C2 contiene C1? " +c2.contains(c1));
-		System.out.println("C1 contiene C3? " +c1.contains(c3));
-		System.out.println("C1 contiene C4? " +c1.contains(c4));
+		shapeArray[0] = new Circle(0, 0, 1);
+		shapeArray[1] = new Circle(0.5, 0.5, 0.5);
+		shapeArray[2] = new Circle(1, 1, 1);
+		shapeArray[3] = new Triangle(0, 0, 1);
+		shapeArray[4] = new Triangle(-2, -2, 4);
 		
-		System.out.println("T1 contiene T2? " +t1.contains(t2));
-		System.out.println("T2 contiene T1? " +t2.contains(t1));
-		System.out.println("T1 contiene T3? " +t1.contains(t3));
-		System.out.println("T1 contiene T4? " +t1.contains(t4));
+		GeometricShape a, b;
 		
-		System.out.println("C1 contiene T1? " +c1.contains(t1));
-		System.out.println("T1 contiene C1? " +t1.contains(c1));
-		System.out.println("C3 contiene T3? " +c3.contains(t3));
-		System.out.println("C3 contiene T4? " +c3.contains(t4)); 
-		
+		for(int i=0; i<shapeArray.length; i++) {
+			a = shapeArray[i];
+			for(int j=0; j<shapeArray.length; j++) {
+				b = shapeArray[j];
+				if(a != b) {
+					if(a.contains(b))
+						System.out.println(a + " contiene " + b);
+					else
+						System.out.println(a + " NON contiene " + b);
+					}
+				}
+			}
 
 	}
 
