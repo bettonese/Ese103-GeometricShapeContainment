@@ -96,30 +96,6 @@ public class Triangle extends GeometricShape{
 	public double getYMax(){
 		return this.yV + this.l * Math.sqrt(3)/2;
 	}
-	/**
-	 * Controlla se la bounding box di questo triangolo contiene quella di un cerchio
-	 * @param t
-	 * @return true se contiene la bounding box del cerchio, altrimenti false
-	 */
-	public boolean contains(Circle c){
-		boolean cont=false;
-		if(this.getXMin() <= c.getXMin() && this.getYMin() <= c.getYMin() && this.getXMax() >= c.getXMax() && this.getYMax() >= c.getYMax() ){
-			cont = true;
-		}
-		return cont;
-	}
-	/**
-	 * Controlla se la bounding box di questo triangolo contiene quella di un altro triangolo
-	 * @param t
-	 * @return true se contiene la bounding box dell'altro triangolo, altrimenti false
-	 */
-	public boolean contains(Triangle t){
-		boolean cont=false;
-		if(this.getXMin() <= t.getXMin() && this.getYMin() <= t.getYMin() && this.getXMax() >= t.getXMax() && this.getYMax() >= t.getYMax() ){
-			cont = true;
-		}
-		return cont;
-	}
 	
 	@Override
 	public String toString() {
